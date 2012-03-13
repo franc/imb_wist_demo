@@ -5,7 +5,7 @@ Spine   = require('spine')
 $       = Spine.$
 
 class Home extends Panel
-  title: "IMB Mobile"
+  title: ""
   #elements:
   #  'form': 'form'
   #el: '#homeScroller'
@@ -43,12 +43,13 @@ class Home extends Panel
     @
   confirm: (e) =>
     setTimeout @disableSubmit(e), 0
-    console.log('confirm')
     @render()
-    setTimeout( (=> @html(require('views/home/confirmation')())), 2000)
-    setTimeout( (=> @navigate('/')), 5000)
+    #setTimeout( (=> @html(require('views/home/confirmation')())), 2000)
+    setTimeout((=> @success_alert('Successfully Paid R25.50 to vida e caffè Hout Bay', (=> @navigate('/')))), 2000)
+    #setTimeout( , 5000)
     @
-
+  success_alert: (message, callback) ->
+    window.navigator.notification.alert(message, callback, 'Purchase confirmed!', 'Awesome!')
 
 class App extends Stage.Global
   constructor: ->

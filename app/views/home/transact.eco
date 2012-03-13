@@ -1,17 +1,23 @@
 <div style='margin:10px'>
+  <div id="logo"></div>
   <div class="well">
-    <div class='price'>
-      R25.50
+    <div class="merchant">
+      vida e caffè Hout Bay
+      <hr/>
     </div>
     <ul class="description">
       <li>1 x Americano : R14.00</li>
       <li>1 x Espresso : R11.50</li>
     </ul>
-    <div class="merchant">
-      vida e caffè Hout Bay
+    <div class='price'>
+      <hr/>
+      <b><center>
+      R25.50
+    </center></b>
     </div>
+    
   </div>
-  <form id='form' onsubmit="return false;">
+  <form id='form_im' onsubmit="return false;">
     <input  type="password"
             type="number" 
             name="password" 
@@ -23,9 +29,9 @@
             autocomplete="off"
             />
     <br/>
-    <div class="btn-group">
-      <button class='btn btn-large btn-info' id='accept_button'><b>Accept</b></button>
-      <button class='btn btn-large btn-danger' id='cancel_button'><b>Decline</b></button>
-    </div>
+    
+    <button class='grey' id='accept_button'><b>Accept</b></button>
+    <button class='orange' id='cancel_button'><b>Decline</b></button>
+    
   </form>
 </div>

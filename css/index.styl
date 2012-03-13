@@ -3,6 +3,7 @@
 
 body, html
   height: 100%
+  background-image: url('background.jpg')
   
 #splash
   position: absolute;
@@ -55,3 +56,41 @@ body.stage
     -webkit-overflow-scrolling: touch
     
 @import './theme'
+
+#form_im input[type="password"]
+  font-size: 18px
+  color: gray
+  margin: 10px
+  padding: 10px
+  border: 1px solid #999
+  -webkit-border-radius: 5px
+  width: 260px
+  -webkit-box-shadow: inset 0 0 5px #666
+
+#form_im button
+  font-size: 16px
+  margin: 5px 10px
+  padding: 10px
+  width: 280px
+  -webkit-border-radius: 5px
+
+#logo
+  height: 35px
+  width: 104px
+  display: block
+  background: url(IMB_logo.png) no-repeat
+  margin-left: auto
+  margin-right: auto
+
+.grey
+  color: #565656
+  border: solid 1px #9d9a9a
+  background: #64991e
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9eaec), to(#bbbcbe))
+
+.orange
+  color: #fef4e9
+  border: solid 1px #da7c0c
+  background: #f78d1d
+  background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20))
+  background: -moz-linear-gradient(top,  #faa51a,  #f47a20)
