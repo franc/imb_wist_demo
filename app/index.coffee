@@ -13,7 +13,7 @@ class Home extends Panel
     'submit #form': 'disableSubmit'
     'tap #splash': 'triggerNotification'
     'tap #accept_button': 'confirm'
-
+    'tap #cancel_button': 'cancel'
   className: 'home'
 
   constructor: ->
@@ -31,7 +31,6 @@ class Home extends Panel
     @
   transactionNotification: ->
     console.log('transactionNotification')
-    #@addButton('Cancel', @cancel).addClass('right')
     @html require('views/home/transact')()
     @
   cancel: -> @navigate('/')
@@ -44,7 +43,6 @@ class Home extends Panel
     @
   confirm: (e) =>
     setTimeout @disableSubmit(e), 0
-    #e?.preventDefault()
     console.log('confirm')
     @render()
     setTimeout( (=> @html(require('views/home/confirmation')())), 2000)

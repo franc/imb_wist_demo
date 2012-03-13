@@ -20,8 +20,12 @@
             placeholder="password"  
             autocorrect="off"
             autocapitalize="off"
-            autocomplete="off"/>
+            autocomplete="off"
+            />
     <br/>
-    <button class='btn btn-large btn-info' id='accept_button'>Accept</button>
+    <div class="btn-group">
+      <button class='btn btn-large btn-info' id='accept_button'><b>Accept</b></button>
+      <button class='btn btn-large btn-danger' id='cancel_button'><b>Decline</b></button>
+    </div>
   </form>
 </div>
