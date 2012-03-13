@@ -17,10 +17,10 @@
 // under the License.
 //
 
-//  PhoneGap.xcconfig
-//  ios
+//  Cordova.xcconfig
+//  cordova-ios
 //
 
-// Override this to use your project specific PHONEGAPLIB. 
+// Override this to use your project specific CORDOVALIB. 
 // You can base it off the current project path, $(PROJECT_DIR)
-PHONEGAPLIB = $(PHONEGAPLIB)
+CORDOVALIB = $(CORDOVALIB)

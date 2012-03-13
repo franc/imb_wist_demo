@@ -19,7 +19,7 @@
 
 //
 //  AppDelegate.m
-//  ios
+//  cordova-ios
 //
 //  Created by Francois Paul on 2012/03/13.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
@@ -28,12 +28,12 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 
-#ifdef PHONEGAP_FRAMEWORK
-    #import <PhoneGap/PGPlugin.h>
-    #import <PhoneGap/PGURLProtocol.h>
+#ifdef CORDOVA_FRAMEWORK
+    #import <Cordova/CDVPlugin.h>
+    #import <Cordova/CDVURLProtocol.h>
 #else
-    #import "PGPlugin.h"
-    #import "PGURLProtocol.h"
+    #import "CDVPlugin.h"
+    #import "CDVURLProtocol.h"
 #endif
 
 
@@ -49,7 +49,7 @@
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage]; 
     [cookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
     
-    [PGURLProtocol registerPGHttpURLProtocol];
+    [CDVURLProtocol registerPGHttpURLProtocol];
     
     return [super init];
 }
@@ -64,7 +64,7 @@
     NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
     if (url && [url isKindOfClass:[NSURL class]]) {
         self.invokeString = [url absoluteString];
-		NSLog(@"ios launchOptions = %@", url);
+		NSLog(@"cordova-ios launchOptions = %@", url);
     }    
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
@@ -128,7 +128,7 @@
     [self.viewController.webView stringByEvaluatingJavaScriptFromString:jsString];
     
     // all plugins will get the notification, and their handlers will be called 
-    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PGPluginHandleOpenURLNotification object:url]];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
     
     return YES;    
 }
@@ -140,7 +140,7 @@
 	return [self.viewController getCommandInstance:className];
 }
 
-- (BOOL) execute:(InvokedUrlCommand*)command
+- (BOOL) execute:(CDVInvokedUrlCommand*)command
 {
 	return [self.viewController execute:command];
 }

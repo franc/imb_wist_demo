@@ -1,6 +1,6 @@
 {
   "libs": [
-    "./app/lib/phonegap.js"
+    "./app/lib/cordova-1.5.0.js"
   ],
   "dependencies": [
     "es5-shimify", 
