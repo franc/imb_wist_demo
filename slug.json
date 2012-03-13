@@ -1,0 +1,18 @@
+{
+  "libs": [
+    "./app/lib/phonegap.js"
+  ],
+  "dependencies": [
+    "es5-shimify", 
+    "json2ify", 
+    "jqueryify", 
+    "gfx",
+    "spine",
+    "spine/lib/local",
+    "spine/lib/ajax",
+    "spine/lib/route",
+    "spine/lib/tmpl",
+    "spine/lib/manager",
+    "spine.mobile"
+  ]
+}

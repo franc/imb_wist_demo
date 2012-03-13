@@ -1,0 +1,25 @@
+<div>
+  <div class='price'>
+    R25.50
+  </div>
+  <ul class="description">
+    <li>1 x Americano : R14.00</li>
+    <li>1 x Espresso : R11.50</li>
+  </ul>
+  <div class="merchant">
+    vida e caffè Hout Bay
+  </div>
+  <form id='form' onsubmit="return false;">
+    <input  type="password"
+            type="number" 
+            name="password" 
+            id="password"
+            value="" 
+            placeholder="password"  
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="off"/>
+    <br/>
+    <button id='accept_button'>Accept</button>
+  </form>
+</div>
